@@ -1,9 +1,101 @@
 {% extends "base.html" %}
 
-{% block title %}Home Page{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Home Page</h1> 
-<p class="indented">hello ❤️</p>
+<style>
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 20px;
+    }
+    
+    .profile-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-picture {
+        width: 150px; /* Adjust size as needed */
+        height: 150px; /* Adjust size as needed */
+        border-radius: 50%;
+        object-fit: cover; /* Ensures the image covers the entire circle */
+        margin-bottom: 20px;
+        object-position: top; /* Adjusts the cropping to show more of the top */
+    }
+    
+    .education {
+        text-align: center;
+    }
+    
+    .education h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .education ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .education li {
+        margin-bottom: 10px;
+    }
+    .info-section {
+        display: flex;
+        justify-content: space-between; /* Space between the two blocks */
+        width: 100%; /* Adjust width as needed */
+        padding: 20px;
+        gap:20px ;
+    }
+    .about-me {
+        display: inline-block;
+        background-color: rgb(175,175,175); /* Optional: Add background color */
+        padding: 10px; /* Optional: Add padding */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+        width: 50%;
+    }
+    
+    .about-me h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .about-me p {
+        margin: 0;
+    }
+</style>
+
+<div class="home-container">
+    <div class="profile-section">
+        <img src="{{ url_for('static', filename='images/profilepic.jpg') }}" alt="Profile Picture" class="profile-picture">
+        <div class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Boston University, Dual Degree in Economics and Data Science</li>
+                <li>Expected Graduation: 2024</li>
+                <!-- Add more education details as needed -->
+            </ul>
+        </div>
+    </div>
+    <div class="info-section">
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>
+                I am a rising junior at Boston University, majoring in Economics and Data Science. I switched lanes in my second year due to a passion for coding and processing data or making predictive models. I plan to attend grad school to refine my skills further. I can handle data cleaning, data visualization, and some machine learning. I want to gain skills in web development and am eager to learn and contribute to a company.
+            </p>
+        </div>
+        <div class="about-me">
+            <h2>Additional Info</h2>
+            <p>
+                Here you can add any additional information you'd like to share, such as hobbies, interests, or other personal details.
+            </p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

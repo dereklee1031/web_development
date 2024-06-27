@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Photography{% endblock %}
+
+{% block content %}
+<style>
+    .photography-background {
+        background: url('{{ url_for('static', filename='images/Background.avif') }}') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .header {
+        color: rgb(255, 255, 255)  ;
+        font-family: Times New Roman ;
+        margin-left: 10px ;
+        font-size: 50px;
+    }
+</style>
+<div class="photography-background">
+  <h1 class="header">Photography</h1>
+  <p class="p">Here are my collections:</p>
+  <div class="picpreview-container">
+    {% for image in images %}
+    <div class="picpreview"> 
+        <img class="pictures {{ image.orientation }}" src="{{ url_for('static', filename=image.path) }}" alt="{{ image.name }}">
+        <p class="caption">{{ image.name }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
+    
