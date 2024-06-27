@@ -15,14 +15,14 @@
     text-indent: 2em; 
   }
   .header1 {
-    font-family: Times New Roman;
-    font-size: 50px;
+    font-family: Arial;
+    font-size: 40px;
     margin-left: 10px;
     color: rgb(0, 0, 0);
   }
   .p {
     margin-left:10px ;
-    color: white ;
+    color: rgb(0, 0, 0) ;
   }
   .picpreview-container {
     display: flex;

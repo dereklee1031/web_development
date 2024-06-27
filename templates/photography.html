@@ -10,14 +10,19 @@
     }
     .header {
         color: rgb(255, 255, 255)  ;
-        font-family: Times New Roman ;
+        font-family: Arial ;
         margin-left: 10px ;
-        font-size: 50px;
+        font-size: 40px;
     }
+    .pp {
+        color: rgb(255, 255, 255);
+        margin-left: 10px;
+    }
+    
 </style>
 <div class="photography-background">
   <h1 class="header">Photography</h1>
-  <p class="p">Here are my collections:</p>
+  <p class="pp">Here are my collections:</p>
   <div class="picpreview-container">
     {% for image in images %}
     <div class="picpreview"> 
