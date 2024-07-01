@@ -24,13 +24,13 @@ def photography():
         {"path": "images/DSCF2930.JPG", "name": "Morning Walk", "orientation": "horizontal"},
         {"path": "images/IMG_1565.JPG", "name": "Cathedral", "orientation": "vertical"},
         {"path": "images/IMG_1458.JPG", "name": "Seine", "orientation": "vertical"},
-        {"path": "images/IMG_1456.JPG", "name": "Paris Alley", "orientation": "vertical"},
+        {"path": "images/IMG_1456.jpg", "name": "Paris Alley", "orientation": "vertical"},
         {"path": "images/IMG_1763.jpg", "name": "Call Box", "orientation": "horizontal"},
-        {"path": "images/IMG_1392 2.JPG", "name": "Massachusetts", "orientation": "horizontal"},
+        {"path": "images/IMG_1392.JPG", "name": "Massachusetts", "orientation": "horizontal"},
 
     ]
     return render_template("photography.html", images=images)
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=8000)
+    app.run(debug=False)
